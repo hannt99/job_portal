@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer utilities {
+    .truncate-1 {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+    }
+    .truncate-2 {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+    }
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
+}
+
+:root {
+    --primary-color: #059669;
+    --primary-hover-color: #047857;
+    --secondary-color: rgba(4, 120, 87, 0.1);
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    text-rendering: optimizeSpeed;
+}
+
+.custom-shadow-v1 {
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.custom-shadow-v2 {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.arrow-top::after {
+    position: absolute;
+    bottom: calc(100% + 3px);
+    left: 10%;
+    margin-left: -6px;
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent transparent var(--primary-hover-color) transparent;
+    content: '';
+}
+
+.bg-multiply {
+    background: url('/assets/images/auth_bg.jpg') center / cover no-repeat;
+}
+
+/* Input file */
+.inputfile {
+    position: absolute;
+    width: 0.1px;
+    height: 0.1px;
+    overflow: hidden;
+    opacity: 0;
+    z-index: -1;
+}
+
+/* Pagination */
+.pagination {
+    margin: 1rem 0;
+    width: fit-content;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    background: var(--secondary-color);
+    padding-left: 1rem;
+}
+
+.pagination button {
+    margin-right: 0.5rem;
+    padding: 4px 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.pagination button:disabled {
+    border: 1px solid var(--primary-color);
+    /* background-color: #333; */
+    font-weight: 600;
+    color: var(--primary-color);
+    cursor: not-allowed;
+}
+
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    background-position: calc(100% - 12px) center !important;
+    background: url("data:image/svg+xml,<svg height='20' width='20' viewBox='0 0 20 20' aria-hidden='true' class='svg' xmlns='http://www.w3.org/2000/svg'><path d='M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z'></path></svg>")
+        no-repeat;
+    padding: 8px 45px 8px 16px;
+}
+
+/* Swiper */
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    padding-top: 10px;
+    padding-bottom: 35px;
+    padding-left: 1px;
+    padding-right: 1px;
+}
+
+.swiper-button-prev {
+    font-size: 3rem !important;
+    color: #3498db !important;
+}
+
+.swiper-button-prev::after {
+    display:none !important;
+}
+
+.swiper-button-next {
+    font-size: 3rem !important;
+    color: #3498db !important;
+}
+
+.swiper-button-next::after {
+    display:none !important;
+}
+
+.bg-home {
+    background: url('/assets/images/home-bg2.png') center / cover no-repeat;
+}
+
+.bg-ads {
+    background: url('/assets/images/ads-bg-1.png') left / cover no-repeat;
+}
+
+.bg-default-cv {
+    background: url('/assets/images/default_cv.jpg') center / cover no-repeat;
+}

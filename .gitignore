@@ -1,0 +1,14 @@
+/client/.env
+/client/node_modules
+/client/.next
+
+/server/.env
+// /server/uploads
+/server/node_modules
+
+/socket/.env
+/socket/node_modules
+
+/admin/.env
+/admin/node_modules
+/admin/.next
